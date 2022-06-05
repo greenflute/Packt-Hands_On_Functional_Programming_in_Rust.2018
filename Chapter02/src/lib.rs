@@ -1,19 +1,14 @@
 extern crate floating_duration;
 use std::time::Instant;
-use floating_duration::{TimeAsFloat, TimeFormat};
-use std::time::SystemTime;
+use floating_duration::{TimeAsFloat};
 use std::{thread, time};
 use std::env;
 use std::fs::File;
 use std::io::{self, Read, Write};
-use std::io::prelude::*;
-use std::process;
 extern crate termion;
-use termion::{clear, cursor, style};
+use termion::{clear, cursor};
 use termion::raw;
 use termion::raw::IntoRawMode;
-use termion::input::TermRead;
-use termion::event::Key;
 use std::cmp;
 
 fn variable_summary<W: Write>(stdout: &mut raw::RawTerminal<W>, vname: &str, data: Vec<f64>) {
@@ -24,14 +19,14 @@ fn variable_summary<W: Write>(stdout: &mut raw::RawTerminal<W>, vname: &str, dat
 fn variable_summary_stats(data: Vec<f64>) -> (f64, f64)
 {
    //calculate statistics
-   let N = data.len();
+   let n = data.len();
    let sum: f64 = data.iter().sum();
-   let avg = sum / (N as f64);
+   let avg = sum / (n as f64);
    let dev = (
        data.clone().into_iter()
        .map(|v| (v - avg).powi(2))
        .fold(0.0, |a, b| a+b)
-       / (N as f64)
+       / (n as f64)
    ).sqrt();
    (avg, dev)
 }
@@ -126,9 +121,9 @@ pub fn run_simulation()
       location = location + velocity * dt;
       velocity = velocity + acceleration * dt;
       acceleration = {
-         let F = (up_input_voltage - down_input_voltage) * 8.0;
+         let force = (up_input_voltage - down_input_voltage) * 8.0;
          let m = 1200000.0;
-         -9.8 + F/m
+         -9.8 + force/m
       };
 
       //5.2. If next floor request in queue is satisfied, then remove from queue
