@@ -1,18 +1,25 @@
-## [Get this title for $10 on Packt's Spring Sale](https://www.packt.com/B09736?utm_source=github&utm_medium=packt-github-repo&utm_campaign=spring_10_dollar_2022)
+# [Get this title for $10 on Packt's Spring Sale](https://www.packt.com/B09736?utm_source=github&utm_medium=packt-github-repo&utm_campaign=spring_10_dollar_2022)
+
 -----
 For a limited period, all eBooks and Videos are only $10. All the practical content you need \- by developers, for developers
 
-# Hands-On Functional Programming in Rust
+## Hands-On Functional Programming in Rust
+
 This is the code repository for [Hands-On Functional Programming in Rust](https://www.packtpub.com/application-development/hands-functional-programming-rust?utm_source=github&utm_medium=repository&utm_campaign=9781788839358), published by [Packt](https://www.packtpub.com/?utm_source=github). It contains all the supporting project files necessary to work through the book from start to finish.
+
 ## About the Book
+
 Functional Programming allows developers to divide programs into smaller, reusable components that ease the creation, testing, and maintenance of software as a whole. Combined with the power of Rust, you can develop robust and scalable applications that fulfill modern day software requirements. This book will help you discover all the Rust features that can be used to build software in a functional way.
+
 ## Instructions and Navigation
+
 All of the code is organized into folders. Each folder starts with a number followed by the application name. For example, Chapter02.
 
 All code files are present in their respective folders.
 
 The code will look like the following:
-```
+
+```rust
 pub trait MotorController
 {
   fn init(&mut self, esp: ElevatorSpecification, est: ElevatorState);
@@ -21,6 +28,7 @@ pub trait MotorController
 ```
 
 In order to successfully read through this book and work out all the code samples, we expect readers to fulfill the following
+
 * We assume familiarity with the concepts from the first 10 chapters of Rust
 documentation (https:/​/​doc.​rust-​lang.​org/​book/​). Some of the material from
 these chapters is fairly advanced, so we will also explain that here when relevant.
@@ -33,10 +41,9 @@ decent Wikipedia articles to explain and expand on the concepts. However,
 knowing the keyword is required to even know what to search for.
 
 ## Related Products
+
 * [Rust Programming By Example](https://www.packtpub.com/application-development/rust-programming-example?utm_source=github&utm_medium=repository&utm_campaign=9781788390637)
 
 * [Mastering Rust](https://www.packtpub.com/application-development/mastering-rust?utm_source=github&utm_medium=repository&utm_campaign=9781785885303)
 
 * [Rust Cookbook](https://www.packtpub.com/application-development/rust-cookbook?utm_source=github&utm_medium=repository&utm_campaign=9781785880254)
-
-
